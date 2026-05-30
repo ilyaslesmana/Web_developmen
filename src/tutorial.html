@@ -1,0 +1,132 @@
+<div class="sc-testi-wrapper">
+  <style>
+    //tutorial
+        .sc-testi-wrapper {
+      background-color: #ffffff !important;
+      font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+        sans-serif;
+      padding: 20px 0; /* Padding atas-bawah dipangkas dari 40px ke 20px */
+      color: #1a1a1a;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      overflow-x: hidden;
+    }
+
+    .testi-header {
+      text-align: center;
+      margin-bottom: 10px; /* Jarak bawah header dikurangi dari 20px ke 10px */
+      padding: 0 20px;
+    }
+
+    .testi-header h3 {
+      font-size: 1.3rem; /* Sedikit dikecilkan agar proporsional */
+      font-weight: 800;
+      color: #e50914;
+      margin-bottom: 2px; /* Jarak judul ke sub-judul makin rapat */
+    }
+
+    .testi-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 12px;
+      padding: 5px 20px; /* Padding vertikal slider dikecilkan */
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .testi-slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .testi-card {
+      flex: 0 0 75%;
+      min-width: 260px;
+      background: #f9f9f9 !important;
+      border: 1px solid #eeeeee !important;
+      border-radius: 12px;
+      padding: 15px; /* Padding dalam kartu dipres agar lebih ramping */
+      scroll-snap-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .user-name {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 4px; /* Jarak nama ke teks review dirapatkan */
+      display: block;
+      color: #e50914;
+    }
+
+    .review-text {
+      font-size: 13px;
+      color: #333;
+      line-height: 1.4; /* Line height dirapatkan dikit biar teks padat */
+      font-style: normal;
+      margin: 0;
+    }
+
+    .badge-verified {
+      font-size: 10px;
+      color: #22c55e;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 8px; /* Jarak badge ke atas dirapatkan */
+    }
+  </style>
+
+  <div class="testi-header">
+    <h3>Bagaimana cara order?</h3>
+    <p style="font-size: 11px; color: #666; margin: 0">
+      ➔ Geser untuk ikuti langkah-langkahnya!
+    </p>
+  </div>
+
+  <div class="testi-slider">
+    <div class="testi-card">
+      <span class="user-name">1. Pengertian paket</span>
+      <p class="review-text">
+        "Silahkan baca di menu paling atas daftar paket"
+      </p>
+    </div>
+
+    <div class="testi-card">
+      <span class="user-name">2. Pilih jenis paket</span>
+      <p class="review-text">
+        "Pilih jenis paket yang sesuai dengan device. TV rekomendasinya
+        Platinum, kalau HP bisa Sharing/Private"
+      </p>
+    </div>
+
+    <div class="testi-card">
+      <span class="user-name">3. Form Pesanan</span>
+      <p class="review-text">
+        "Isi form dengan benar karena akan dipakai untuk mengirim akun Netflix
+        nantinya"
+      </p>
+    </div>
+
+    <div class="testi-card">
+      <span class="user-name">4. Metode pembayaran</span>
+      <p class="review-text">
+        "Silahkan download atau Screenshot QR Code dan lakukan pembayaran di
+        E-wallet favorit kalian"
+      </p>
+    </div>
+
+    <div class="testi-card">
+      <span class="user-name">5. Selesai</span>
+      <p class="review-text">
+        "Setelah bayar, kami hubungi lewat WA. Bisa juga klik Chat CS di bawah
+        kanan"
+      </p>
+      <div class="badge-verified">✓ CS GoStream Aktif</div>
+    </div>
+  </div>
+</div>

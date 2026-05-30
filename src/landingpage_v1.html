@@ -1,0 +1,155 @@
+<div class="sc-dark-mode-wrapper">
+  <style>
+    /* Paksa wrapper utama jadi gelap */
+    .sc-dark-mode-wrapper {
+      background-color: #f5f5f9 !important;
+      color: #101010 !important;
+      font-family: "Inter", sans-serif;
+      padding: 30px 0; /* Dikurangi dikit biar nggak terlalu makan space vertical */
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      overflow-x: hidden;
+    }
+
+    .sc-header {
+      text-align: center;
+      padding: 0 20px;
+      margin-bottom: 20px;
+    }
+
+    .sc-header h2 {
+      color: #e50914 !important;
+      font-weight: 800;
+      font-size: 1.6rem; /* Lebih kecil biar pas sama kartu ramping */
+      margin: 0;
+    }
+
+    /* Container Slider */
+    .sc-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 12px; /* Jarak antar kartu lebih rapat */
+      padding: 15px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .sc-slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Kartu Paket - EKSTRA RAMPING */
+    .sc-card {
+      flex: 0 0 60%; /* Dari 70% ke 60%, makin ramping */
+      min-width: 210px; /* Batas minimal lebar kartu */
+      background: #ffffff !important;
+      border-radius: 14px;
+      padding: 18px; /* Padding lebih kecil lagi */
+      scroll-snap-align: center;
+      border: 1px solid rgba(0, 0, 0, 0.05) !important;
+      box-sizing: border-box;
+      color: #333 !important;
+      text-align: left;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .sc-title {
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #e50914 !important;
+      text-transform: uppercase;
+    }
+
+    .sc-price {
+      font-size: 1.8rem; /* Lebih ramping */
+      font-weight: 900;
+      margin: 10px 0;
+      color: #0b0b0b !important;
+    }
+
+    .sc-price span {
+      font-size: 0.85rem;
+      color: #0b0b0b !important;
+      font-weight: 400;
+    }
+
+    .sc-features {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0;
+      font-size: 0.8rem; /* Font lebih kecil biar nggak overflow */
+      color: #222 !important;
+    }
+
+    .sc-features li {
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sc-features li::before {
+      content: "✔";
+      color: #e50914;
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
+
+    /* Platinum Variant */
+    .platinum-card {
+      border: 1.5px solid #00d2ff !important;
+    }
+    .platinum-card .sc-title {
+      color: #00d2ff !important;
+    }
+    .platinum-card .sc-features li::before {
+      color: #00d2ff;
+    }
+  </style>
+
+  <div class="sc-header">
+    <h2>Rincian Paket Netflix</h2>
+    <p style="color: #a3a3a3; font-size: 12px; margin-top: 5px">
+      ➔ Geser untuk paket lain
+    </p>
+  </div>
+
+  <div class="sc-slider">
+    <div class="sc-card" style="border: 2px solid #020202 !important">
+      <div class="sc-title">🍿 Sharing Plan</div>
+      <div class="sc-price">25k <span>/bln</span></div>
+      <ul class="sc-features">
+        <li>1 Profil 2 User</li>
+        <li>4K Ultra HD</li>
+        <li>Garansi 30 Hari</li>
+        <li>Bukan untuk TV</li>
+        <li>Download Film</li>
+      </ul>
+    </div>
+
+    <div class="sc-card" style="border: 2px solid #e50914 !important">
+      <div class="sc-title">🏠 Private Plan</div>
+      <div class="sc-price">50k <span>/bln</span></div>
+      <ul class="sc-features">
+        <li>1 Profil 1 user</li>
+        <li>Total isi 5 orang</li>
+        <li>Limit di 4 user</li>
+        <li>Support Prioritas</li>
+        <li>Ganti PIN Profil</li>
+      </ul>
+    </div>
+
+    <div class="sc-card platinum-card">
+      <div class="sc-title">💎 Platinum VIP</div>
+      <div class="sc-price">60K <span>/bln</span></div>
+      <ul class="sc-features">
+        <li>Isi 4 orang</li>
+        <li>No screen limit</li>
+        <li>Recomend untuk TV</li>
+        <li>Support Prioritas</li>
+        <li>Best Choice</li>
+      </ul>
+    </div>
+  </div>
+</div>

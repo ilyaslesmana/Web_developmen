@@ -1,0 +1,210 @@
+<div class="yst-nav-wrapper">
+  <div class="yst-bottom-nav">
+    <a href="#html-code-leWW2qbIek" class="nav-item active">
+      <span class="nav-icon">📖</span>
+      <span class="nav-label">Tutorial</span>
+    </a>
+    <a href="#html-code-eDVMwwGd7I" class="nav-item">
+      <span class="nav-icon">⭐</span>
+      <span class="nav-label">Testimoni</span>
+    </a>
+
+    <div class="fab-container">
+      <div class="fab-popup">Langsung Checkout</div>
+
+      <a href="https://gostream.myscalev.com/checkout-page" class="fab-btn">
+        <span class="fab-icon">🚀</span>
+      </a>
+    </div>
+
+    <a href="#html-code-LbJ7wlRyZH" class="nav-item">
+      <span class="nav-icon">💡</span>
+      <span class="nav-label">Faq</span>
+    </a>
+    <a
+      href="https://wa.me/6285117442203?text=hallo%20min%20saya%20mau%20tanya?"
+      target="_blank"
+      class="nav-item"
+    >
+      <span class="nav-icon">💬</span>
+      <span class="nav-label">Chat CS</span>
+    </a>
+  </div>
+</div>
+
+<style>
+  /* Efek Scroll Halus (Smooth Scroll) */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Reset & Container */
+  .yst-nav-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100000;
+    background: transparent;
+    font-family:
+      "Inter",
+      -apple-system,
+      sans-serif;
+  }
+
+  .yst-bottom-nav {
+    background: #f6f9fc;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    padding-bottom: env(safe-area-inset-bottom);
+    border-radius: 25px 25px 0 0;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+
+  /* Styling Item Navigasi */
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+
+  .nav-icon {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .nav-label {
+    font-size: 11px;
+    font-weight: bold;
+    color: #383b43;
+  }
+
+  /* Active State */
+  .nav-item.active .nav-icon {
+    transform: scale(1.1);
+  }
+
+  .nav-item.active .nav-label {
+    color: #e50914;
+  }
+
+  /* FLOATING ACTION BUTTON (FAB) */
+  .fab-container {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin-top: -45px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* STYLE POPUP DI ATAS TAS */
+  .fab-popup {
+    position: absolute;
+    top: -35px; /* Posisinya melayang di atas FAB */
+    background: #1a1a1a; /* Hitam Netflix biar kontras sama tombol merah */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: float-anim 2s infinite ease-in-out;
+    z-index: 5;
+  }
+
+  /* Segitiga kecil (arrow) di bawah popup */
+  .fab-popup::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #1a1a1a;
+  }
+
+  /* Animasi melayang naik turun */
+  @keyframes float-anim {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  /* Animasi Cahaya (Glow) */
+  @keyframes fab-glow {
+    0% {
+      box-shadow: 0 0 10px rgba(229, 9, 20, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 25px rgb(229, 9, 20);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(229, 9, 20, 0.4);
+    }
+  }
+
+  .fab-btn {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    background: #e50914;
+    border-radius: 50%;
+    border: 5px solid #f6f9fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: fab-glow 2s infinite ease-in-out;
+    z-index: 2;
+    text-decoration: none;
+  }
+
+  .fab-btn:active {
+    transform: scale(0.9);
+  }
+
+  .fab-icon {
+    font-size: 28px;
+  }
+
+  /* LENGKUNGAN PRESISI */
+  .fab-container::before,
+  .fab-container::after {
+    content: "";
+    position: absolute;
+    top: 36px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .fab-container::before {
+    left: -19px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 6px 6px 0 6px #ffffff;
+  }
+
+  .fab-container::after {
+    right: -19px;
+    border-bottom-left-radius: 20px;
+    box-shadow: -6px 6px 0 6px #ffffff;
+  }
+</style>

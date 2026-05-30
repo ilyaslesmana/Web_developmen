@@ -1,0 +1,163 @@
+<div class="yst-nav-wrapper">
+  <div class="yst-bottom-nav">
+    <div class="nav-item active">
+      <span class="nav-icon">🏠</span>
+      <span class="nav-label">Paket</span>
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">👛</span>
+      <span class="nav-label">Testimoni</span>
+    </div>
+
+    <div class="fab-container">
+      <button class="fab-btn">
+        <span class="fab-icon">🛍️</span>
+      </button>
+    </div>
+
+    <div class="nav-item">
+      <span class="nav-icon">📈</span>
+      <span class="nav-label">Faq</span>
+    </div>
+    <div class="nav-item">
+      <span class="nav-icon">👤</span>
+      <span class="nav-label">Chat CS</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Reset & Container */
+  .yst-nav-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100000;
+    background: transparent;
+    font-family:
+      "Inter",
+      -apple-system,
+      sans-serif;
+  }
+
+  .yst-bottom-nav {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    padding-bottom: env(safe-area-inset-bottom);
+    border-radius: 25px 25px 0 0;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+
+  /* Styling Item Navigasi */
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .nav-icon {
+    font-size: 20px;
+    margin-bottom: 4px;
+    /* Ikon Berwarna */
+    filter: grayscale(0);
+    opacity: 1;
+  }
+
+  .nav-label {
+    font-size: 11px;
+    /* Teks Bold & Merah Netflix */
+    font-weight: bold;
+    color: #383b43;
+  }
+
+  /* Active State */
+  .nav-item.active .nav-icon {
+    transform: scale(1.1);
+  }
+
+  .nav-item.active .nav-label {
+    color: #383b43;
+  }
+
+  /* FLOATING ACTION BUTTON (FAB) */
+  .fab-container {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin-top: -60px;
+  }
+
+  /* Animasi Cahaya (Glow) */
+  @keyframes fab-glow {
+    0% {
+      box-shadow: 0 8px 20px rgba(0, 86, 255, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 35px rgba(0, 86, 255, 0.8);
+    }
+    100% {
+      box-shadow: 0 8px 20px rgba(0, 86, 255, 0.4);
+    }
+  }
+
+  .fab-btn {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    background: #0056ff;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Efek Cahaya */
+    animation: fab-glow 2s infinite ease-in-out;
+    /* Di depan lengkungan */
+    z-index: 2;
+  }
+
+  .fab-btn:active {
+    transform: scale(0.9);
+  }
+
+  .fab-icon {
+    font-size: 28px;
+  }
+
+  /* Efek Cut-out Melengkung (Di Belakang Tombol) */
+  .fab-container::before,
+  .fab-container::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    pointer-events: none;
+    /* Di belakang tombol biru */
+    z-index: 1;
+  }
+
+  .fab-container::before {
+    left: -25px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 0 5px #ffffff;
+  }
+
+  .fab-container::after {
+    right: -20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: -5px 5px 0 5px #ffffff;
+  }
+</style>

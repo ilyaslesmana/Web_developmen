@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Penjualan</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Container Utama */
+        .content-wrapper {
+            max-width: 500px;
+            margin: 0 auto;
+            padding-bottom: 100px; /* Biar gak ketutup tombol bawah */
+        }
+
+        .divider {
+            height: 4px;
+            background-color: #28a745;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #666;
+            font-size: 22px;
+            margin: 15px 0;
+        }
+
+        .promo-label {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .discount-title {
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        .final-price {
+            color: #e60000;
+            font-size: 36px;
+            font-weight: 900;
+            margin: 10px 0 30px 0;
+        }
+
+        /* Timer Section */
+        .timer-title {
+            font-weight: 900;
+            font-size: 22px;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .timer-display {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            color: #e60000;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .timer-labels {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 12px;
+            color: #e60000;
+            margin-top: 5px;
+        }
+
+        /* Form Section */
+        .form-section {
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        .form-header {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .form-header::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #ccc;
+            margin-left: 10px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .required { color: red; }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+        }
+
+        /* WhatsApp Sticky Button */
+        .wa-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #90ee90; /* Hijau muda sesuai gambar */
+            color: #155724;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 85%;
+            max-width: 400px;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 1px solid #c3e6cb;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content-wrapper">
+    <div class="divider"></div>
+
+    <h1>Paket Digital<br>Layanan Streaming</h1>
+    
+    <p>berapa sih harganya?</p>
+    <div class="original-price">Rp 60.000</div>
+
+    <div class="promo-label">Promo Terbatas Waktu</div>
+    <div class="discount-title">Diskon Spesial</div>
+    <div class="final-price">Rp 20.000</div>
+
+    <div class="timer-title">WAKTU PROMO TERSISA</div>
+    
+    <div class="timer-display">
+        <span id="days">00</span> : <span id="hours">00</span> : <span id="mins">14</span> : <span id="secs">27</span>
+    </div>
+    <div class="timer-labels">
+        <span>Hari</span>
+        <span>Jam</span>
+        <span>Menit</span>
+        <span>Detik</span>
+    </div>
+
+    <div class="form-section">
+</div>
+
+<script>
+    // Logika Countdown Sederhana
+    function countdown() {
+        let mins = 14;
+        let secs = 27;
+        
+        const minsEl = document.getElementById('mins');
+        const secsEl = document.getElementById('secs');
+
+        setInterval(() => {
+            if(secs > 0) {
+                secs--;
+            } else {
+                if(mins > 0) {
+                    mins--;
+                    secs = 59;
+                }
+            }
+            minsEl.innerText = mins < 10 ? '0' + mins : mins;
+            secsEl.innerText = secs < 10 ? '0' + secs : secs;
+        }, 1000);
+    }
+    countdown();
+</script>
+
+</body>
+</html>

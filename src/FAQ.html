@@ -1,0 +1,141 @@
+<div class="sc-faq-wrapper">
+  <style>
+    //FAQ
+        .sc-faq-wrapper {
+      background-color: #ffffff !important;
+      font-family: "Inter", sans-serif;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      color: #1a1a1a;
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .faq-header h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #e50914;
+    }
+
+    /* Logic Accordion */
+    .faq-item {
+      border-bottom: 1px solid #eeeeee;
+      margin-bottom: 10px;
+    }
+
+    .faq-input {
+      display: none;
+    }
+
+    .faq-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .faq-label:hover {
+      color: #e50914;
+    }
+
+    .faq-icon {
+      font-size: 18px;
+      transition: transform 0.3s;
+      color: #666;
+    }
+
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease-out;
+      color: #666;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* Action: Saat checkbox di-check */
+    .faq-input:checked ~ .faq-content {
+      max-height: 200px; /* Sesuaikan dengan panjang jawaban */
+      padding-bottom: 15px;
+    }
+
+    .faq-input:checked ~ .faq-label .faq-icon {
+      transform: rotate(45deg);
+      color: #e50914;
+    }
+  </style>
+
+  <div class="faq-header">
+    <h3>Pertanyaan Populer</h3>
+    <p style="font-size: 12px; color: #666">
+      Semua yang perlu lo tahu sebelum langganan.
+    </p>
+  </div>
+
+  <div class="faq-container">
+    <div class="faq-item">
+      <input type="checkbox" id="faq1" class="faq-input" />
+      <label for="faq1" class="faq-label">
+        Apakah akunnya legal dan anti-hold?
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-content">
+        <p>
+          100% Legal. Kami menggunakan metode pembayaran resmi. Garansi penuh
+          berlaku jika terjadi kendala (hold) selama masa langganan aktif.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq2" class="faq-input" />
+      <label for="faq2" class="faq-label">
+        Berapa lama proses pengiriman akun?
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-content">
+        <p>
+          Sistem kami memproses pesanan segera setelah konfirmasi pembayaran.
+          Rata-rata waktu tunggu hanya 2-10 menit via WhatsApp.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq3" class="faq-input" />
+      <label for="faq3" class="faq-label">
+        Bisa nonton di Smart TV atau STB?
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-content">
+        <p>
+          Sangat bisa! Untuk pengalaman terbaik di Smart TV, kami sangat
+          menyarankan paket <strong>Platinum VIP</strong> agar tidak terkena
+          limit layar atau hambatan resolusi.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq4" class="faq-input" />
+      <label for="faq4" class="faq-label">
+        Gimana kalau ada kendala login?
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-content">
+        <p>
+          Langsung chat admin via WA dengan melampirkan bukti order. Tim CS
+          Gostream siap bantu tempa kendala lo sampai beres!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

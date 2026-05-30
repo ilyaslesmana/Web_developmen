@@ -1,0 +1,168 @@
+<div id="sales-popup" class="sales-popup-container">
+  <div class="popup-content">
+    <div class="product-img">
+      <img src="https://img.icons8.com/color/48/netflix.png" alt="Netflix" />
+    </div>
+    <div class="popup-text">
+      <p class="buyer-name">
+        <span id="random-name">Rendi</span> baru saja membeli
+      </p>
+      <p id="random-product" class="product-name">Netflix Premium 1 Bulan</p>
+      <p class="time-ago">Baru saja</p>
+    </div>
+    <button onclick="closePopup()" class="close-btn">&times;</button>
+  </div>
+</div>
+
+<style>
+  .sales-popup-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100001;
+    font-family: "Inter", sans-serif;
+    display: none;
+    animation: slideInLeft 0.5s ease-out;
+  }
+
+  .popup-content {
+    background: #ffffff;
+    padding: 12px 18px;
+    border-radius: 12px;
+    /* GARIS MERAH TEGAS */
+    border: 2px solid #e50914;
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    min-width: 250px;
+  }
+
+  .product-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+  }
+
+  .popup-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buyer-name {
+    margin: 0;
+    font-size: 11px;
+    color: #666;
+  }
+
+  .buyer-name span {
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .product-name {
+    margin: 2px 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #e50914;
+  }
+
+  .time-ago {
+    margin: 0;
+    font-size: 10px;
+    color: #999;
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    color: #ccc;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  // Variasi Nama & Produk
+  const names = [
+    "Andi",
+    "Budi",
+    "Siska",
+    "Dewi",
+    "Fajar",
+    "Riyan",
+    "Lutfi",
+    "Amel",
+    "Rendi",
+    "Santi",
+    "Bagas",
+    "Zatmeng",
+    "Dimas",
+    "Aulia",
+  ];
+  const products = [
+    "Netflix Private 1 Bulan",
+    "Netflix Platinum 1 Bulan",
+    "Netflix Private 1 Bulan",
+    "Netflix Sharing 15 Hari",
+    "Netflix Sharing 15 Hari",
+    "Netflix Platinum 15 Hari",
+    "Netflix Private 15 Hari",
+  ];
+
+  const popup = document.getElementById("sales-popup");
+  const nameElement = document.getElementById("random-name");
+  const productElement = document.getElementById("random-product");
+
+  function showPopup() {
+    if (!popup) return;
+
+    // Pilih nama & produk acak
+    const randomName = names[Math.floor(Math.random() * names.length)];
+    const randomProduct = products[Math.floor(Math.random() * products.length)];
+
+    nameElement.innerText = randomName;
+    productElement.innerText = randomProduct;
+
+    popup.style.display = "block";
+    popup.style.animation = "slideInLeft 0.5s ease-out";
+
+    setTimeout(() => {
+      popup.style.animation = "fadeOut 0.5s forwards";
+      setTimeout(() => {
+        popup.style.display = "none";
+      }, 500);
+    }, 5000);
+  }
+
+  function closePopup() {
+    popup.style.display = "none";
+  }
+
+  setTimeout(showPopup, 3000);
+  setInterval(showPopup, 18000);
+</script>

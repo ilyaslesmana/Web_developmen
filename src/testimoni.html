@@ -1,0 +1,132 @@
+<div class="sc-testi-wrapper">
+  <style>
+    //testimoni
+    .sc-testi-wrapper {
+      background-color: #ffffff !important;
+      font-family: "Inter", sans-serif;
+      padding: 40px 0; /* Padding samping nol biar slide full layar */
+      color: #1a1a1a;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      overflow-x: hidden;
+    }
+
+    .testi-header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 0 20px;
+    }
+
+    .testi-header h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #e50914;
+      margin-bottom: 5px;
+    }
+
+    /* Ubah Grid jadi Slider (Olah Data Tampilan) */
+    .testi-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 15px;
+      padding: 10px 20px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .testi-slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .testi-card {
+      flex: 0 0 80%; /* Lebar kartu 80% biar sisanya kelihatan */
+      min-width: 260px;
+      background: #f9f9f9 !important;
+      border: 1px solid #eeeeee !important;
+      border-radius: 12px;
+      padding: 20px;
+      scroll-snap-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .stars {
+      color: #ffc107;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .user-name {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .review-text {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.5;
+      font-style: italic;
+    }
+
+    .badge-verified {
+      font-size: 10px;
+      color: #22c55e;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 10px;
+    }
+  </style>
+
+  <div class="testi-header">
+    <h3>Apa Kata Mereka?</h3>
+    <p style="font-size: 12px; color: #666">
+      ➔ Geser untuk lihat bukti kepuasan pelanggan.
+    </p>
+  </div>
+
+  <div class="testi-slider">
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <span class="user-name">Andri Pratama</span>
+      <p class="review-text">
+        "Gokil, prosesnya cepet banget. Baru bayar 2 menit kemudian akun
+        dikirim. Platinum VIP-nya beneran anti limit buat di Smart TV gue!"
+      </p>
+      <div class="badge-verified">✓ Pembeli Terverifikasi</div>
+    </div>
+
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <span class="user-name">Siska Amalia</span>
+      <p class="review-text">
+        "Udah langganan 6 bulan di sini. CS-nya responsif banget kalo ada
+        kendala login. Sharing plan-nya tetep stabil walaupun murah."
+      </p>
+      <div class="badge-verified">✓ Pembeli Terverifikasi</div>
+    </div>
+
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <span class="user-name">Budi SI Unpas</span>
+      <p class="review-text">
+        "Awalnya ragu beli di luar marketplace, tapi pas nyoba Private Plan-nya
+        mantap. Email sendiri jadi lebih aman. Trusted seller!"
+      </p>
+      <div class="badge-verified">✓ Pembeli Terverifikasi</div>
+    </div>
+
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <span class="user-name">Rizky Dev</span>
+      <p class="review-text">
+        "Rekomendasi buat yang mau cari akun Netflix legal tanpa ribet tiap
+        bulan ganti akun. Ambil yang Sharing langsung hemat banyak."
+      </p>
+      <div class="badge-verified">✓ Pembeli Terverifikasi</div>
+    </div>
+  </div>
+</div>
